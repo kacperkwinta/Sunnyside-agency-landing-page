@@ -15,7 +15,7 @@
 * {
 	padding: 0;
 	margin: 0;
-	box-sizing: inherit;
+	box-sizing: border-box;
 }
 
 html {
@@ -26,6 +26,7 @@ body {
 	// for big screens
 	max-width: 144rem;
 	margin: 0 auto;
+	border: 1px solid var(--color-neutral-4);
 
 	font-size: 1.8rem;
 	font-family: "Barlow", sans-serif;
@@ -97,10 +98,10 @@ nav {
 		width: 4rem;
 	}
 }
+
 ///////////////////////////////////
 ///        SECTION ABOUT        ///
 ///////////////////////////////////
-
 .row {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -176,6 +177,91 @@ nav {
 			max-width: 100%;
 		}
 	}
+
+	.box-text--small {
+		max-width: 40rem;
+		margin: 0 auto;
+		text-align: center;
+		transform: translateY(-20rem);
+
+		.header-tertiary {
+			font-size: 3rem;
+			font-weight: 800;
+			font-family: "Fraunces", serif;
+			margin-bottom: 2.4rem;
+
+			&--green {
+				color: var(--color-primar-3);
+			}
+
+			&--blue {
+				color: var(--color-primar-4);
+			}
+		}
+
+		p {
+			line-height: 1.4;
+		}
+
+		.p--green {
+			color: var(--color-primar-3);
+		}
+
+		.p--blue {
+			color: var(--color-primar-4);
+		}
+	}
+}
+
+////////////////////////////////////////
+///      SECTION TESTIMONIALS        ///
+////////////////////////////////////////
+.section-testimonials {
+	text-align: center;
+}
+
+.header-testimonials {
+	font-size: 2.4rem;
+	font-family: "Fraunces", serif;
+	font-weight: 800;
+	color: var(--color-neutral-4);
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	margin-bottom: 9.6rem;
+}
+
+.container-testimonials {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4.8rem;
+	padding-bottom: 9.6rem;
+}
+
+.client-photo {
+	border-radius: 50%;
+	width: 7.4rem;
+	margin-bottom: 4.8rem;
+}
+
+.client-opinion {
+	line-height: 1.5;
+	color: var(--color-neutral-2);
+	max-width: 35rem;
+	margin-bottom: 5.2rem;
+}
+
+.client-name {
+	font-family: "Fraunces", serif;
+	font-weight: 800;
+	font-size: 2rem;
+	color: var(--color-neutral-1);
+	margin-bottom: 1.4rem;
+}
+
+.client-role {
+	color: var(--color-neutral-4);
+	font-size: 1.4rem;
 }
 
 // SPACING SYSTEM (px)
