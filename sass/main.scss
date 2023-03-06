@@ -24,7 +24,7 @@ html {
 
 body {
 	// for big screens
-	max-width: 192rem;
+	max-width: 144rem;
 	margin: 0 auto;
 
 	font-size: 1.8rem;
@@ -89,7 +89,7 @@ nav {
 		display: block;
 		position: absolute;
 		left: 50%;
-		top: 100%;
+		top: 50%;
 		transform: translate(-50%, 100%);
 		background-image: url(../images/icon-arrow-down.svg);
 		background-repeat: no-repeat no-repeat;
@@ -100,8 +100,89 @@ nav {
 ///////////////////////////////////
 ///        SECTION ABOUT        ///
 ///////////////////////////////////
-.section-about {
+
+.row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+
+	.box-text {
+		margin: 0 auto;
+		max-width: 50rem;
+		padding: 2.4rem 4.8rem;
+
+		.header-secondary {
+			font-family: "Fraunces", serif;
+			color: var(--color-neutral-1);
+			font-size: 4.4rem;
+			font-weight: 800;
+			margin-bottom: 2.4rem;
+		}
+
+		.row-paragraph {
+			color: var(--color-neutral-3);
+			line-height: 1.5;
+			margin-bottom: 3.6rem;
+		}
+
+		.row-link {
+			&:link,
+			&:visited {
+				text-transform: uppercase;
+				font-weight: 800;
+				font-family: "Fraunces", serif;
+				text-decoration: none;
+				position: relative;
+				color: var(--color-neutral-1);
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 110%;
+				height: 8px;
+				border-radius: 10rem;
+				top: 1.5rem;
+				left: -0.6rem;
+				z-index: -1;
+				opacity: 0.4;
+				transition: all 0.2s ease;
+			}
+
+			&:hover::after {
+				opacity: 1;
+			}
+		}
+
+		// FOR YELLOW LINK IN ABOUT US
+		.row-link--yellow {
+			&::after {
+				background-color: var(--color-primar-2);
+			}
+		}
+
+		// FOR PINK LINK IN ABOUT US
+		.row-link--pink {
+			&::after {
+				background-color: var(--color-primar-1);
+			}
+		}
+	}
+
+	.box-img {
+		img {
+			display: block;
+			max-width: 100%;
+		}
+	}
 }
+
+// SPACING SYSTEM (px)
+// 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+// FONT SIZE SYSTEM (px)
+// 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
 // font-family: 'Barlow', sans-serif;
 // font-family: 'Fraunces', serif;
