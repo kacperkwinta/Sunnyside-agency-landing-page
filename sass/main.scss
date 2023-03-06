@@ -1,0 +1,107 @@
+:root {
+	--color-primar-1: hsl(7, 99%, 70%);
+	--color-primar-2: hsl(51, 100%, 49%);
+	--color-primar-3: hsl(167, 40%, 24%);
+	--color-primar-4: hsl(198, 62%, 26%);
+	--color-primar-5: hsl(168, 34%, 41%);
+
+	--color-neutral-1: hsl(212, 27%, 19%);
+	--color-neutral-2: hsl(213, 9%, 39%);
+	--color-neutral-3: hsl(232, 10%, 55%);
+	--color-neutral-4: hsl(210, 4%, 67%);
+	--color-neutral-5: hsl(0, 0%, 100%);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	// for big screens
+	max-width: 192rem;
+	margin: 0 auto;
+
+	font-size: 1.8rem;
+	font-family: "Barlow", sans-serif;
+}
+
+////////////////////////////
+///        HEADER        ///
+////////////////////////////
+header {
+	height: 85vh;
+	background-image: url(../images/desktop/image-header.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+nav {
+	padding: 4.8rem;
+	display: flex;
+	justify-content: space-between;
+
+	ul {
+		list-style: none;
+		display: flex;
+		gap: 4.8rem;
+	}
+}
+
+.nav-link:link,
+.nav-link:visited {
+	text-decoration: none;
+	color: var(--color-neutral-5);
+}
+
+.nav-link--cta {
+	padding: 1.6rem 2.4rem;
+	font-family: "Fraunces", serif;
+	color: black !important;
+	background-color: var(--color-neutral-5);
+	border-radius: 10rem;
+	transition: all 0.2s ease;
+
+	&:hover {
+		background-color: hsla(0, 0%, 100%, 0.4);
+		color: var(--color-neutral-5) !important;
+	}
+}
+
+.header-primary {
+	margin-top: 9.6rem;
+	text-align: center;
+	color: var(--color-neutral-5);
+	text-transform: uppercase;
+	font-family: "Fraunces", serif;
+	font-weight: 900;
+	letter-spacing: 8px;
+	font-size: 6.4rem;
+	position: relative;
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: 100%;
+		transform: translate(-50%, 100%);
+		background-image: url(../images/icon-arrow-down.svg);
+		background-repeat: no-repeat no-repeat;
+		height: 12rem;
+		width: 4rem;
+	}
+}
+///////////////////////////////////
+///        SECTION ABOUT        ///
+///////////////////////////////////
+.section-about {
+}
+
+// font-family: 'Barlow', sans-serif;
+// font-family: 'Fraunces', serif;
